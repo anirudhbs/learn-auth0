@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { login, logout } from '../AuthService'
+
 import '../App.css'
 
 class Nav extends Component {
@@ -14,8 +16,8 @@ class Nav extends Component {
           <li> <Link to='/otherlist'>Other List</Link> </li>
         </ul>
         <ul>
-          <li><button>Log In</button></li>
-          <li><button>Log out </button></li>
+          <li><button onClick={() => login()}>Log In</button></li>
+          <li><button onClick={() => logout()}>Log out</button></li>
         </ul>
       </nav>
     )

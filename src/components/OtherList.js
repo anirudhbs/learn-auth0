@@ -19,7 +19,6 @@ class OtherList extends Component {
     })
     .then((results) => results.json())
     .then((data) => {
-      console.log('o', data)
       this.setState({ listItems: data })
     })
     .catch(function (error) {

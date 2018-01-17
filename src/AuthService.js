@@ -27,7 +27,6 @@ export function login () {
 export function logout () {
   clearIdToken()
   clearAccessToken()
-  // browserHistory.push('/')
 }
 
 export function requireAuth (nextState, replace) {

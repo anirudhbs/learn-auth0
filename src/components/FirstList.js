@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { getAccessToken } from '../AuthService'
 
 class FirstList extends Component {
   constructor (props) {
@@ -15,7 +16,10 @@ class FirstList extends Component {
   fetchList () {
     const url = 'http://localhost:8080'
     fetch(url + '/list', {
-      method: 'get'
+      method: 'get',
+      headers: {
+        Authorization: `Bearer ${getAccessToken()}`
+      }
     })
     .then((results) => results.json())
     .then((data) => {
